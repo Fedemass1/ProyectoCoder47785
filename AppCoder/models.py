@@ -14,6 +14,10 @@ class Estudiante(models.Model):
     apellido = models.CharField(max_length=30)
     email = models.EmailField()
 
+   #Creo método magico
+    def __str__ (self):
+        return self.nombre
+
 
 class Profesor(models.Model):
     nombre = models.CharField(max_length=30)
