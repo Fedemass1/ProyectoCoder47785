@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block cambio %}
+{#El action vacio significa que la redireccion va a ser sobre la misma vista#}
+
+    <form action="" method = "POST">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+        <input type="submit" value="Crear">
+
+
+    </form>
+
+
+{% endblock %}
